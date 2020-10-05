@@ -260,7 +260,7 @@ class PaymentMethodService
         $orderReference = '',
         $cardToken = false
     ) {
-        $amount = number_format($amount, 2);
+        $amount = number_format($amount, 2, '.', '');
         if (!$orderReference) {
             $this->module->currentOrderReference = $orderReference = Order::generateReference();
         }
